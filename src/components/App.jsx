@@ -40,7 +40,9 @@ export default class App extends Component {
     // const queryPage = this.state.page;
 
     if (prevQuery !== newQuery) {
-    
+      this.setState({
+        images: [],
+      });
       this.fetchImgOnQuery();
     }
   }
