@@ -14,7 +14,7 @@ class Searchbar extends Component {
       onFormSubmitHandler = e => {
         e.preventDefault();
         if (this.state.query.trim() === '') {
-            Notiflix.Notify.failure('Enter your  query');
+            Notiflix.Notify.failure('Enter your query');
           return;
         }
         this.props.onSubmit(this.state);
@@ -25,7 +25,7 @@ class Searchbar extends Component {
     
       render() {
         return (
-          <header className={css.searchbar}>
+          <header className={css.searchBar}>
             <form className={css.searchForm} onSubmit={this.onFormSubmitHandler}>
               <button type="submit" className={css.searchFormButton}>
                 <span className={css.searchFormButtonLabel}>Search</span>
