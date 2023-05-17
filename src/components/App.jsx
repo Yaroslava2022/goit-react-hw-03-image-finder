@@ -30,6 +30,8 @@ export default class App extends Component {
   handleSearchSubmit = searchData => {
     console.log(searchData);
     this.setState({
+      images: [],
+      page: 1,
       query: searchData.query,
     });
   };
@@ -40,9 +42,9 @@ export default class App extends Component {
     // const queryPage = this.state.page;
 
     if (prevQuery !== newQuery) {
-      this.setState({
-        images: [],
-      });
+      // this.setState({
+      //   images: [],
+      // });
       this.fetchImgOnQuery();
     }
   }
